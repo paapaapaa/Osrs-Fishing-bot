@@ -15,8 +15,6 @@ y_pad = 280
 
 def screenGrab():
 
-    #box = ()
-    #im = ImageGrab.grab(box)
     im = ImageGrab.grab(bbox=(590,280,1160,810) )
     im.save(os.getcwd() + '\\grab.png','PNG')
     return im
@@ -50,26 +48,6 @@ class Cord:
     c27 = (1275,710)
     c28 = (1315,710)
 
-
-#def checkIfAfk():
-# laita tää kattomaan runelitestä et hakkaako jo. eli jos näkyy vihree hakataan prkl nii odota
-
-
-    #im = ImageGrab.grab(bbox=(640, 327, 685, 348))
-    #im.save(os.getcwd() + '\\afkgrab.png', 'PNG')
-
-    #afkgrb = cv2.imread("afkgrab.png")
-    #tpl3 = cv2.imread("template_3.png")
-
-    #fishing = pyautogui.locate(tpl3, afkgrb, confidence=0.90)
-    #print(fishing)
-
-    #return fishing
-    #if is_there is not None:
-        #leftclick()
-        #time.sleep(10)
-    #else:
-        #return
 
 
 def drop():
@@ -140,9 +118,6 @@ def findimage():
         except:
             return
 
-
-    # def mousepos(cord):
-    # win32api.SetCursorPos((x_pad + cord[0], y_pad + cord[1]))
 
 def emptyinv():
 
@@ -229,12 +204,9 @@ def check_tree():
         return
 
 
-    #win32api.SetCursorPos((y,x ))
-
-
 
 def checkinv():
-    #Kato inventoryn vika kohta jos väri vaihtuu ni lähe pankkii pelle (varmaa alkuu helpompi vaa tiputtaa ne logit ja pankkiimeno myöhemmi)
+
 
     im = ImageGrab.grab(bbox=(1300,690,1340,725))
     im.save(os.getcwd() + '\\lastinv.png', 'PNG')
@@ -255,54 +227,12 @@ def checkinv():
 
 
 
-
-#def magic():
-
-    cord1 = 0
-    cord2 = 0
-
-
-   # findimage()
-
-   # x,y = pyautogui.position()
-   # print(x,y)
-  #  print(cord1, cord2)
-   # cordx = (((cord1 - x)**2)**0.5)
-   # cordy = (((cord2 - y)**2)**0.5)
-
-   # if cordx and cordy <= 200:
-        #duration = ((r.randint(20,75))/100)
-  #  elif cordx and cordy <= 750:
-       # duration = ((r.randint(85, 125))/100)
- #   else:
-    #    duration = ((r.randint(125, 200))/100)
-
- #   print(f"duration is {duration}")
-
-   # try:
-      #  pyautogui.moveTo(cord1,cord2,duration)
-
-   # except:
-     #   return
-
-#def mousepos(cord):
-    #win32api.SetCursorPos((x_pad + cord[0], y_pad + cord[1]))
-
-
-
 def clicktarget():
     findimage()
-    #leftclick()
 
 
 def main():
 
-    #screenGrab()
-    #check_tree()
-    #checkIfAfk()
-    #checkinv()
-    #emptyinv()
-    #drop()
 
     while True:
         if keyboard.is_pressed("Esc"):
@@ -314,5 +244,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-#   Laita sillee et se ei klickkaa ellei siina lue chop down tree
